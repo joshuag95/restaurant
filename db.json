@@ -1,10 +1,26 @@
-{ recipes: [
-    {
-        id:1,
-        name: spaghetti,
-        vegetarian: true,
-        hasPeanuts: false,
-        dairyFree: true,
-        recipe: whatever
-    }
-]}
+{
+    "recipes": [
+        {
+            "id": 1,
+            "name": "spaghetti",
+            "vegetarian": true,
+            "hasPeanuts": false,
+            "dairyFree": true,
+            "ingredients": "noodles, tomato sauce, water",
+            "comments": "This is good, but i like to add galric to my sauce.",
+            "likes": 3,
+            "favorite": false
+        },
+        {
+            "id": 2,
+            "name": "pad thai",
+            "vegetarian": false,
+            "hasPeanuts": true,
+            "dairyFree": true,
+            "ingredients": "noodles, garlic , water, eggs , onion, peanuts, beef, bean sprouts",
+            "comments": "I always make mine without bean sprouts.",
+            "likes": 3,
+            "favorite": false
+        }
+    ]
+}

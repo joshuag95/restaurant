@@ -1,9 +1,12 @@
-import React from 'react';
+import React,{useState} from 'react';
 
 
-function RecipeCard() {
+function RecipeCard({food}) {
+    console.log("3", food)
     return (
-        <div>RecipeCard</div>
+        <div>
+            <h1>{food.name}</h1>
+        </div>
     )
 }
 

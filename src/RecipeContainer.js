@@ -3,7 +3,7 @@ import RecipeCard from "./RecipeCard"
 
 
 function RecipeContainer({ food }) {
-    console.log("2", food)
+    console.log("2a", food)
     const recipes = food.map((foodObj) => { <RecipeCard key={foodObj.id} food={foodObj} /> })
 
     return (

@@ -6,10 +6,10 @@ import {
 } from "react-router-dom";
 import HeaderPage from './HeaderPage';
 import NavBar from './NavBar';
-import RecipeContainer from './RecipeContainer';
+// import RecipeContainer from './RecipeContainer';
 import Favorites from './Favorites';
-import FullMenu from './FullMenu'
-
+import FullMenu from './FullMenu';
+import RecipeForm from './RecipeForm'
 
 function App() {
   const [food, setFood] = useState([])
@@ -19,7 +19,11 @@ function App() {
       .then(res => res.json())
       .then(data => setFood(data))
   }, [])
-console.log("1", food)
+
+  const handleAddRecipe = () => {
+    
+    console.log('working')
+  }
 
   return (
     <div className='App'>
@@ -27,9 +31,10 @@ console.log("1", food)
       <NavBar />
       <Switch>
         <Route exact path='/Favorites' ><Favorites /></Route>
-        <Route exact path='/FullMenu' ><FullMenu /></Route>
+        <Route exact path='/FullMenu' ><FullMenu food={food} /></Route>
+        <Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
       </Switch>
-      <RecipeContainer food={food}/>
+     
       This is the start of a beautiful thing
     </div>
 

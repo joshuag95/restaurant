@@ -19,17 +19,17 @@ function App() {
       .then(res => res.json())
       .then(data => setFood(data))
   }, [])
-
+console.log("1", food)
 
   return (
     <div className='App'>
       <HeaderPage />
-      <RecipeContainer food={food}/>
       <NavBar />
       <Switch>
         <Route exact path='/Favorites' ><Favorites /></Route>
         <Route exact path='/FullMenu' ><FullMenu /></Route>
       </Switch>
+      <RecipeContainer food={food}/>
       This is the start of a beautiful thing
     </div>
 

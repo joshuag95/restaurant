@@ -4,8 +4,9 @@ import RecipeCard from "./RecipeCard"
 
 function RecipeContainer() {
     return (
-        <div></div>
+        <div>RecipeContainer</div>
     )
 }
+
 
 export default RecipeContainer

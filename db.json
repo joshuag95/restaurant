@@ -1,0 +1,10 @@
+{ recipes: [
+    {
+        id:1,
+        name: spaghetti,
+        vegetarian: true,
+        hasPeanuts: false,
+        dairyFree: true,
+        recipe: whatever
+    }
+]}

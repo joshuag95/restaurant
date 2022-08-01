@@ -1,8 +1,11 @@
 import React from 'react';
+
+
 function HeaderPage(){
 return(
-    <div></div>
+    <div>HeaderPage</div>
 )
 }
+
 
 export default HeaderPage;

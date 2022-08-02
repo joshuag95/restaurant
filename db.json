@@ -23,36 +23,6 @@
       "comments": "I always make mine without bean sprouts.",
       "likes": 5,
       "favorite": false
-    },
-    {
-      "id": 3
-    },
-    {
-      "id": 4
-    },
-    {
-      "name": "a",
-      "image": "s",
-      "vegetarian": false,
-      "hasPeanuts": false,
-      "dairyFree": true,
-      "ingredients": "e",
-      "comments": "",
-      "likes": 0,
-      "favorite": false,
-      "id": 5
-    },
-    {
-      "name": "a",
-      "image": "ad",
-      "vegetarian": true,
-      "hasPeanuts": false,
-      "dairyFree": false,
-      "ingredients": "s",
-      "comments": "",
-      "likes": 0,
-      "favorite": false,
-      "id": 6
     }
   ]
 }

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 
-function RecipeCard({ food }) {
+function RecipeCard({ food, handleDelete }) {
     
     const { name, vegetarian, image, hasPeanuts, dairyFree, ingredients, comments, likes, favorite, id } = food
 
@@ -29,6 +29,7 @@ function RecipeCard({ food }) {
                 <li><a>{dairyFree ? "🐮: No" : "🐮: Yes"}</a></li>
                 <li onClick={handleLikeCount}><a >😘:{" " + likeCount}</a></li>
                 <li><a>{comments}</a></li>
+                <button onClick={() => {handleDelete(id)}}>Remove Recipe</button>
             </ul>
         </div>
     )

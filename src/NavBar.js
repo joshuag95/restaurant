@@ -8,7 +8,8 @@ function NavBar() {
             <ul>
                <li><NavLink to='/'> Home </NavLink></li>
                <li><NavLink to='/Favorites'> Favorites </NavLink></li>
-               <li><NavLink to='/FullMenu'> FullMenu </NavLink></li>
+               <li><NavLink to='/FullMenu'> Full Menu </NavLink></li>
+               <li><NavLink to='/RecipeForm'> Recipe Form </NavLink></li>
             </ul>
         </div>
 

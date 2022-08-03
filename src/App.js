@@ -7,7 +7,6 @@ import {
 import HeaderPage from './HeaderPage';
 import NavBar from './NavBar';
 // import RecipeContainer from './RecipeContainer';
-import Favorites from './Favorites';
 import FullMenu from './FullMenu';
 import RecipeForm from './RecipeForm'
 // import styled from 'styled-components';
@@ -49,22 +48,6 @@ function App() {
 		setFood(deleteArray)
 	}
 
-	// favorite function that appears on cards
-	const [favoritesArray, setFavoritesArray] = useState([])
-  
-
-  // function for filtering favorites
-	function handleFilter() {
-		const filterArray = food.filter(foodObj => {
-			return foodObj.favorite === true
-		})
-    setFavoritesArray(filterArray)
-    
-	}
-
-
-console.log(favoritesArray)
-
 
 	return (
 		<div className='App'>
@@ -72,8 +55,7 @@ console.log(favoritesArray)
 			<NavBar />
 			<Switch>
 				<Route exact path='/Home' ><Home /></Route>
-				<Route exact path='/Favorites' ><Favorites handleFilter={handleFilter} favoritesArray={favoritesArray} /></Route>
-				<Route exact path='/FullMenu' ><FullMenu handleFilter={handleFilter} food={food} handleDelete={handleDelete} /></Route>
+				<Route exact path='/FullMenu' ><FullMenu food={food} handleDelete={handleDelete} /></Route>
 				<Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
 			</Switch>
 

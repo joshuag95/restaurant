@@ -1,28 +1,31 @@
 {
   "recipes": [
     {
-      "id": 1,
       "name": "spaghetti",
       "image": "https://pbs.twimg.com/profile_images/460266810785288192/2Hmbmjzk_400x400.jpeg",
       "vegetarian": true,
       "hasPeanuts": false,
       "dairyFree": true,
       "ingredients": "noodles, tomato sauce, water",
-      "comments": "This is good, but i like to add garlic to my sauce.",
-      "likes": 6,
-      "favorite": true
+      "comments": [
+        "This is good, but i like to add garlic to my sauce.",
+        "string"
+      ],
+      "likes": 28,
+      "id": 1
     },
     {
-      "id": 2,
       "name": "pad thai",
       "image": "https://media-cdn.tripadvisor.com/media/photo-s/06/6d/ad/9b/worst-chicken-pad-thai.jpg",
       "vegetarian": false,
       "hasPeanuts": true,
       "dairyFree": true,
       "ingredients": "noodles, garlic , water, eggs , onion, peanuts, chicken, bean sprouts",
-      "comments": "I always make mine without bean sprouts.",
+      "comments": [
+        "I always make mine without bean sprouts."
+      ],
       "likes": 6,
-      "favorite": false
+      "id": 2
     },
     {
       "name": "moose tacos",
@@ -30,9 +33,10 @@
       "vegetarian": false,
       "hasPeanuts": false,
       "dairyFree": true,
-      "comments": "",
+      "comments": [
+        ""
+      ],
       "likes": 0,
-      "favorite": false,
       "id": 3
     }
   ]

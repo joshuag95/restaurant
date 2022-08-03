@@ -20,11 +20,7 @@ function RecipeForm({ addRecipe }) {
         setHasDairy(hasDairy => !hasDairy)
     }
 
-    function setId() {
-        const max = Math.floor(1000)
-        const min = Math.ceil(Math.random * 200)
-        return Math.floor(Math.random() * (max - min) + min)
-    }
+
 
 
     return (

@@ -38,12 +38,22 @@ function App() {
       .then(res => console.log("res", res))
   }
 
+  // delete function that appears on cards
   function handleDelete(objId) {
-    console.log("object", objId)
     const deleteArray = food.filter(foodObj => {
-      foodObj.id = !objId
+      return foodObj.id !== objId
     })
-    console.log("array", deleteArray)
+    fetch(`http://localhost:3000/recipes/${objId}`, {method: 'DELETE'})
+    setFood(deleteArray)
+  }
+
+  // favorite function that appears on cards
+  function handleFavorite(favoriteToggle) {
+    console.log(favoriteToggle)
+    const favoritesArray = food.filter( foodObj => {
+      return foodObj.favorite === true
+    })
+    console.log(favoritesArray)
   }
 
   return (
@@ -52,7 +62,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path='/Favorites' ><Favorites /></Route>
-        <Route exact path='/FullMenu' ><FullMenu food={food} handleDelete={handleDelete} /></Route>
+        <Route exact path='/FullMenu' ><FullMenu handleFavorite={handleFavorite} food={food} handleDelete={handleDelete} /></Route>
         <Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
       </Switch>
 

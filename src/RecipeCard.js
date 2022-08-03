@@ -1,11 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
 
-function RecipeCard({ food, handleDelete }) {
+function RecipeCard({ food, handleDelete, handleFavorite }) {
     
     const { name, vegetarian, image, hasPeanuts, dairyFree, ingredients, comments, likes, favorite, id } = food
 
     let [likeCount, setLikeCount] = useState(likes)
+
+    const [favoriteToggle, setFavoriteToggle] = useState(favorite)
+
+    function handleFavoriteToggle() {
+        setFavoriteToggle(favoriteToggle => !favoriteToggle)
+        console.log(favoriteToggle)
+        handleFavorite(favoriteToggle)
+    }
 
     const handleLikeCount = () => {
         setLikeCount(likeCount = likeCount +1, console.log(likeCount))
@@ -29,6 +37,7 @@ function RecipeCard({ food, handleDelete }) {
                 <li><a>{dairyFree ? "🐮: No" : "🐮: Yes"}</a></li>
                 <li onClick={handleLikeCount}><a >😘:{" " + likeCount}</a></li>
                 <li><a>{comments}</a></li>
+                <button onClick={() => {handleFavoriteToggle()}}>⭐ Favorite</button>
                 <button onClick={() => {handleDelete(id)}}>Remove Recipe</button>
             </ul>
         </div>

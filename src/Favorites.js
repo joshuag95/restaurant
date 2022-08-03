@@ -1,10 +1,10 @@
 import React from 'react';
 import FavoriteCard from './FavoriteCard';
 
-function Favorites({ filterArray, handleFilter }) {
-
-    const favoriteObj = filterArray.map(foodObj => {
-        return <FavoriteCard handleFilter={handleFilter} foodObj={foodObj} key={foodObj.id} />
+function Favorites({ favoritesArray, handleFilter }) {
+    console.log(favoritesArray)
+    const favoriteObj = favoritesArray.map(foodObj => {
+        return <FavoriteCard key={foodObj.id} handleFilter={handleFilter} foodObj={foodObj} />
     })
     return (
         <div>{favoriteObj}</div>

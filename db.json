@@ -10,7 +10,7 @@
       "ingredients": "noodles, tomato sauce, water",
       "comments": "This is good, but i like to add garlic to my sauce.",
       "likes": 6,
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 2,

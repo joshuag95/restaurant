@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 
 
-=======
+
 function RecipeCard({ food, handleDelete, handleFilter }) {
 
 

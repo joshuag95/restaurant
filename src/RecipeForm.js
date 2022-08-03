@@ -28,7 +28,7 @@ function RecipeForm({ addRecipe }) {
 
 
     return (
-        <form>
+        <form style={{background: "aqua", border: "dotted red"}}>
             <h6>Name: <input onChange={(e) => { setName(e.target.value) }} type='text' placeholder="Name" /></h6>
             <h6>Image URL: <input onChange={(e) => { setImage(e.target.value) }} type='text' placeholder="Image URL" /></h6>
 

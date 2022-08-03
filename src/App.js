@@ -11,19 +11,15 @@ import Favorites from './Favorites';
 import FullMenu from './FullMenu';
 import RecipeForm from './RecipeForm'
 // import styled from 'styled-components';
+import Home from './Home';
 
 function App() {
 	const [food, setFood] = useState([])
 
-	const filterArray = food.filter(foodObj => {
-		return foodObj.favorite === true
-	})
-
-	useEffect(() => {
+		useEffect(() => {
 		fetch("http://localhost:3000/recipes")
 			.then(res => res.json())
 			.then(data => setFood(data))
-			.then(setFavoritesArray(filterArray))
 	}, [])
 
 	// Function for adding new recipe on RecipeForm
@@ -55,16 +51,19 @@ function App() {
 
 	// favorite function that appears on cards
 	const [favoritesArray, setFavoritesArray] = useState([])
+  
 
+  // function for filtering favorites
 	function handleFilter() {
 		const filterArray = food.filter(foodObj => {
 			return foodObj.favorite === true
 		})
-		setFavoritesArray(filterArray)
+    setFavoritesArray(filterArray)
+    
 	}
 
 
-
+console.log(favoritesArray)
 
 
 	return (
@@ -72,7 +71,8 @@ function App() {
 			<HeaderPage />
 			<NavBar />
 			<Switch>
-				<Route exact path='/Favorites' ><Favorites handleFilter={handleFilter} filterArray={favoritesArray} /></Route>
+				<Route exact path='/Home' ><Home /></Route>
+				<Route exact path='/Favorites' ><Favorites handleFilter={handleFilter} favoritesArray={favoritesArray} /></Route>
 				<Route exact path='/FullMenu' ><FullMenu handleFilter={handleFilter} food={food} handleDelete={handleDelete} /></Route>
 				<Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
 			</Switch>

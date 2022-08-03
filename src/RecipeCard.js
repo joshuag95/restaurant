@@ -38,15 +38,15 @@ function RecipeCard({ food, handleDelete, handleFavorite }) {
                 <a>{vegetarian ? "🍖: No" : "🍖: Yes"}</a><br/>
                 <a>{hasPeanuts ? "🥜: Yes" : "🥜: No"}</a><br/>
                 <a>{dairyFree ? "🐮: No" : "🐮: Yes"}</a><br/>
-                <a onClick={handleLikeCount}>😘:{" " + likeCount}</a>
+                <a onClick={handleLikeCount} style={{cursor: "pointer"}}>😘:{"⬅ " + likeCount}</a>
                 <ul>
                     <br/>
                     <a style={{fontWeight: "bold", color: "turquoise"}}>COMMENTS</a>
                     <br/>
                     <br/>
                     <li className="cardComments"><a>{comments}</a></li>
-                    <button onClick={() => { handleFavoriteToggle() }}>⭐ Favorite</button>
-                    <button onClick={() => { handleDelete(id) }}>Remove Recipe</button>
+                    <button style={{cursor: "pointer"}} onClick={() => { handleFavoriteToggle() }}>⭐ Favorite</button>
+                    <button style={{cursor: "pointer"}} onClick={() => { handleDelete(id) }}>Remove Recipe</button>
                 </ul>
             </ul>
         </div>

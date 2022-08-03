@@ -1,19 +1,27 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 
 
-function RecipeCard({ food, handleDelete, handleFavorite }) {
+=======
+function RecipeCard({ food, handleDelete, handleFilter }) {
+
 
     const { name, vegetarian, image, hasPeanuts, dairyFree, ingredients, comments, likes, favorite, id } = food
 
     let [likeCount, setLikeCount] = useState(likes)
 
-    const [favoriteToggle, setFavoriteToggle] = useState(favorite)
+    const [favoriteToggle, setFavoriteToggle] = useState(false)
 
     function handleFavoriteToggle() {
         setFavoriteToggle(favoriteToggle => !favoriteToggle)
-        console.log(favoriteToggle)
-        handleFavorite(favoriteToggle)
+        handleFilter()
+        fetch(`http://localhost:3000/recipes/${id}`, {
+            method: "PATCH",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify({
+                favorite: favoriteToggle
+            })
+        })
     }
 
     const handleLikeCount = () => {
@@ -48,6 +56,7 @@ function RecipeCard({ food, handleDelete, handleFavorite }) {
                     <button style={{cursor: "pointer"}} onClick={() => { handleFavoriteToggle() }}>⭐ Favorite</button>
                     <button style={{cursor: "pointer"}} onClick={() => { handleDelete(id) }}>Remove Recipe</button>
                 </ul>
+
             </ul>
         </div>
     )

@@ -23,6 +23,17 @@
       "comments": "I always make mine without bean sprouts.",
       "likes": 5,
       "favorite": false
+    },
+    {
+      "name": "moose tacos",
+      "image": "https://d3d0lqu00lnqvz.cloudfront.net/media/media/82d06bf1-25ff-46ee-8ff5-93dd73cf05c4.jpg",
+      "vegetarian": false,
+      "hasPeanuts": false,
+      "dairyFree": true,
+      "comments": "",
+      "likes": 0,
+      "favorite": false,
+      "id": 3
     }
   ]
 }

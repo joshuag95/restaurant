@@ -9,7 +9,7 @@
       "dairyFree": true,
       "ingredients": "noodles, tomato sauce, water",
       "comments": "This is good, but i like to add garlic to my sauce.",
-      "likes": 4,
+      "likes": 6,
       "favorite": false
     },
     {
@@ -21,7 +21,7 @@
       "dairyFree": true,
       "ingredients": "noodles, garlic , water, eggs , onion, peanuts, chicken, bean sprouts",
       "comments": "I always make mine without bean sprouts.",
-      "likes": 5,
+      "likes": 6,
       "favorite": false
     },
     {

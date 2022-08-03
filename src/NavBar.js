@@ -5,11 +5,11 @@ import { NavLink } from 'react-router-dom';
 function NavBar() {
     return (
         <div>
-            <ul>
-               <li><NavLink to='/'> Home </NavLink></li>
-               <li><NavLink to='/Favorites'> Favorites </NavLink></li>
-               <li><NavLink to='/FullMenu'> Full Menu </NavLink></li>
-               <li><NavLink to='/RecipeForm'> Recipe Form </NavLink></li>
+            <ul className='navBar'>
+               <a><NavLink to='/'> Home </NavLink></a>
+               <a><NavLink to='/Favorites'> Favorites </NavLink></a>
+               <a><NavLink to='/FullMenu'> Full Menu </NavLink></a>
+               <a><NavLink to='/RecipeForm'> Recipe Form </NavLink></a>
             </ul>
         </div>
 

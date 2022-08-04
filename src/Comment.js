@@ -2,7 +2,7 @@ import React from 'react';
 
 function Comment({comment}) {
     return (
-        <p>{comment}</p>
+        <p className='comment'>{comment}</p>
     )
 }
 

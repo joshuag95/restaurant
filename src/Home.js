@@ -28,10 +28,12 @@ function Home({food}){
     return(
         <div>
             <h1>Welcome to Picky Eater</h1>
-            <p>This restaurant can and will make anything. Make a suggestion in the recipe form and we will make it. Be sure to comment on and like your favorite dishes!</p>
-            <ul>
-                <h1>Meal of the Day: {randomObj.name}</h1><br/>
-                <image className="mealOfTheDay" src={randomObj.image} style={{height: '150px'}}/>
+            <p className="description">This restaurant can and will make anything<br></br>
+            Make a suggestion in the recipe form and we will make it<br></br> 
+            Be sure to comment on and like your favorite dishes!</p>
+            <ul >
+                <h1 className="dailyMeal">Meal of the Day: <br></br> {randomObj.name}<br/>
+                <image src={randomObj.image} style={{height: '150px'}}/></h1>
             </ul>
         </div>
     )

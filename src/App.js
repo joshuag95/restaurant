@@ -65,7 +65,7 @@ function App() {
 				<Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
 			</Switch>
 
-			This is the start of a beautiful thing
+			
 		</div>
 
 	);

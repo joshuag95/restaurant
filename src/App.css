@@ -7,16 +7,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+ 
 }
 
 h1 {
-  background-color: #05a839;
+  background-color: #e45219;
   border: dotted #c5cf07;
-  color: #f126ea;
-  font-family: ;
-  box-shadow: 2px 2px 7px 1px #050f15;
+  color: #fffcfa;
+    box-shadow: 2px 2px 7px 1px #050f15;
   text-shadow: 1px 2px 2px #520351;
-
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
 }
 
 .mealOfTheDay {
@@ -32,15 +33,39 @@ h1 {
   background-size: cover;
   padding: 18px;
 
+
 }
 
+.home {
+  padding-top: 11%;
+}
 .navBar>a {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   background-color: aqua;
-
+  text-align: center;
+  
 }
 
+.description{
+  background-color:blanchedalmond;
+  color:coral;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+
+.dailyMeal{
+  border: ridge #ae1700;
+  background-image: url(https://m.media-amazon.com/images/I/41chfVU8fKS._AC_SX425_.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  border-radius: 60px;
+  word-wrap: break-word;
+  color: gold;
+
+}
 .card {
   border: ridge #ae1700;
   background-image: url(https://m.media-amazon.com/images/I/41chfVU8fKS._AC_SX425_.jpg);
@@ -50,3 +75,9 @@ h1 {
   border-radius: 40px;
 
 }
+
+.commentbtn{
+  position: relative;
+  
+}
+

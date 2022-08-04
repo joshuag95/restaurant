@@ -60,7 +60,7 @@ function RecipeCard({ food, handleDelete }) {
             <ul>
                 <h2 style={{ color: "crimson" }}>{name}</h2>
                 <img src={image} style={{ height: "200px" }} />
-                <button onClick={() => handleToggle()} >{toggle ? 'ingredients' : 'comments'}</button>
+                <button className="commentbtn" onClick={() => handleToggle()} >{toggle ? 'ingredients' : 'comments'}</button>
             </ul>
             <ul style={{paddingBlock: "20px"}}>
                 <p>{vegetarian ? "🍖: No" : "🍖: Yes"}</p>
@@ -78,7 +78,8 @@ function RecipeCard({ food, handleDelete }) {
                             <CommentContainer comments={commentsArray} />
                         </div>
                         <input type='text' placeholder='Write your comment here!' onChange={(e) => setSearchString(e.target.value)} />
-                        <button onClick={() => renderComments(searchString)}>Submit</button>
+                        <br></br>
+                        <button  onClick={() => renderComments(searchString)}>Submit</button>
                     </ul> 
 
                     : ingredients}</div></li>

@@ -3,7 +3,7 @@ import React from 'react';
 
 
 function CommentContainer({comments}) {
-    console.log('1',comments)
+  
 
     const getComments = comments.map(comment => {
             // return < Comment key={comment.length-1} comment={comment}/>

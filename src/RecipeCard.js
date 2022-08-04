@@ -4,14 +4,14 @@ import CommentContainer from './CommentContainer';
 
 
 
-function RecipeCard({ food, handleDelete}) {
+function RecipeCard({ food, handleDelete }) {
 
 
     const { name, vegetarian, image, hasPeanuts, dairyFree, ingredients, comments, likes, id } = food
 
     let [likeCount, setLikeCount] = useState(likes)
 
-
+    // Function for handling like increment
     const handleLikeCount = () => {
         setLikeCount(likeCount = likeCount + 1, console.log(likeCount))
         fetch(`http://localhost:3000/recipes/${id}`, {
@@ -28,12 +28,20 @@ function RecipeCard({ food, handleDelete}) {
 
     let [commentsArray, setCommentsArray] = useState(comments)
 
-
+    // Function for putting comments on the DOM 
     function renderComments(newComment) {
-        setCommentsArray([...commentsArray, newComment])
-        console.log(commentsArray)
-        
-        }
+        const newCommentArray = [...commentsArray, newComment]
+        setCommentsArray(newCommentArray)
+        fetch(`http://localhost:3000/recipes/${id}`, {
+            method: "PATCH",
+            headers: { "Content-type": "application/json" },
+            body: JSON.stringify({
+                comments: newCommentArray
+            })
+        })
+
+
+    }
 
     const [toggle, setToggle] = useState(false)
 
@@ -43,35 +51,39 @@ function RecipeCard({ food, handleDelete}) {
         setToggle(toggle => !toggle)
     }
 
+
+
+
+
     return (
         <div className='card'>
             <ul>
-            <h2 style={{color: "crimson"}}>{name}</h2>
-            <img src={image} style={{ height: "200px" }} />
-            <button onClick={() => handleToggle()} >{toggle ? 'ingredients' : 'comments'}</button>
+                <h2 style={{ color: "crimson" }}>{name}</h2>
+                <img src={image} style={{ height: "200px" }} />
+                <button onClick={() => handleToggle()} >{toggle ? 'ingredients' : 'comments'}</button>
             </ul>
-            <ul style={{paddingBlock: "20px"}}>
-                <p>{vegetarian ? "🍖: No" : "🍖: Yes"}</p><br/>
-                <p>{hasPeanuts ? "🥜: Yes" : "🥜: No"}</p><br/>
-                <p>{dairyFree ? "🐮: No" : "🐮: Yes"}</p><br/>
-                <p onClick={handleLikeCount} style={{cursor: "pointer"}}>😘:{"⬅ " + likeCount}</p>
+            <ul style={{ paddingBlock: "20px" }}>
+                <p>{vegetarian ? "🍖: No" : "🍖: Yes"}</p><br />
+                <p>{hasPeanuts ? "🥜: Yes" : "🥜: No"}</p><br />
+                <p>{dairyFree ? "🐮: No" : "🐮: Yes"}</p><br />
+                <p onClick={handleLikeCount} style={{ cursor: "pointer" }}>😘:{"⬅ " + likeCount}</p>
                 <div>
-                    <br/>
-                    <p style={{fontWeight: "bold", color: "turquoise"}}>{toggle ? 'Comments' : 'Ingredients'}</p>
-                    <br/>
-                    <br/>
-                    <li className="cardComments"><div>{toggle ? 
+                    <br />
+                    <p style={{ fontWeight: "bold", color: "turquoise" }}>{toggle ? 'Comments' : 'Ingredients'}</p>
+                    <br />
+                    <br />
+                    <li className="cardComments"><div>{toggle ?
 
-                    <ul>
-                        <div>
-                            <CommentContainer comments={commentsArray} />
-                        </div>
-                        <input type='text' placeholder='Write your comment here!' onChange={(e) => setSearchString(e.target.value)} />
-                        <button onClick={() => renderComments(searchString)}>Submit</button>
-                    </ul> 
+                        <ul>
+                            <div>
+                                <CommentContainer comments={commentsArray} />
+                            </div>
+                            <input type='text' placeholder='Write your comment here!' onChange={(e) => setSearchString(e.target.value)} />
+                            <button onClick={() => renderComments(searchString)}>Submit</button>
+                        </ul>
 
-                    : ingredients}</div></li>
-                    <button style={{cursor: "pointer"}} onClick={() => { handleDelete(id) }}>Remove Recipe</button>
+                        : ingredients}</div></li>
+                    <button style={{ cursor: "pointer" }} onClick={() => { handleDelete(id) }}>Remove Recipe</button>
                 </div>
 
             </ul>

@@ -1,9 +1,11 @@
 import React from "react";
 
-function SearchBar({setSearchString}) {
+function SearchBar({ setSearchString }) {
 
     return (
-        <input onChange={(e) => setSearchString(e.target.value)} placeholder="Search"/>
+        <p className="searchBar">
+            <input  onChange={(e) => setSearchString(e.target.value)} placeholder="Search" />
+        </p>
     )
 }
 

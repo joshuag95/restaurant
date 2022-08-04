@@ -32,9 +32,16 @@ function Home({food}){
             Make a suggestion in the recipe form and we will make it<br></br> 
             Be sure to comment on and like your favorite dishes!</p>
             <ul >
-                <h1 className="dailyMeal">Meal of the Day: <br></br> {randomObj.name}<br/>
-                <image src={randomObj.image} style={{height: '150px'}}/></h1>
+                <h1 className="dailyMeal">Suggested Dish: 
+                <br></br> 
+                {randomObj.name}
+                <br></br>
+                <img className="image" src={randomObj.image} style={{height: '150px'}}>
+                    </img></h1>
+               
+                
             </ul>
+            
         </div>
     )
 }

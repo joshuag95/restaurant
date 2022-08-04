@@ -16,17 +16,15 @@ import SearchBar from './SearchBar';
 function App() {
 	const [food, setFood] = useState([])
 
-		useEffect(() => {
+	useEffect(() => {
 		fetch("http://localhost:3000/recipes")
 			.then(res => res.json())
 			.then(data => setFood(data))
 	}, [])
 
 	// Function for adding new recipe on RecipeForm
-	const handleAddRecipe = (recipeObj) => {
-		console.log(recipeObj)
+	const handleAddRecipe = (recipeObj, formReset) => {
 		const newArray = [...food, recipeObj]
-		console.log("array", newArray)
 		setFood(newArray)
 		fetch("http://localhost:3000/recipes", {
 			method: 'POST',
@@ -38,6 +36,9 @@ function App() {
 		)
 			.then(res => res.json())
 			.then(res => console.log("res", res))
+			.then(formReset())
+			
+	
 	}
 
 	// delete function that appears on cards
@@ -51,21 +52,26 @@ function App() {
 
 	const [searchString, setSearchString] = useState('')
 
-	const filtered = food.filter(filterObj => filterObj.name.toLowerCase().includes(searchString.toLowerCase()))
+	const filtered = food.filter(filterObj => {
+		return (
+			filterObj.name.toLowerCase().includes(searchString.toLowerCase()) 
+			||
+		 	filterObj.ingredients.toLowerCase().includes(searchString.toLowerCase())
+	)})
 
 
 	return (
 		<div className='App'>
 			<HeaderPage />
-			<NavBar  food={food} />
-			<SearchBar setSearchString={setSearchString}/>
+			<NavBar food={food} />
+			
 			<Switch>
 				<Route exact path='/Home' ><Home food={food} /></Route>
-				<Route exact path='/FullMenu' ><FullMenu food={filtered} handleDelete={handleDelete} /></Route>
+				<Route exact path='/FullMenu' ><FullMenu food={filtered} handleDelete={handleDelete} setSearchString={setSearchString} /></Route>
 				<Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
 			</Switch>
 
-			
+
 		</div>
 
 	);

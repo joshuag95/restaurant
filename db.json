@@ -23,22 +23,11 @@
       "dairyFree": true,
       "ingredients": "noodles, garlic , water, eggs , onion, peanuts, chicken, bean sprouts",
       "comments": [
-        "I always make mine without bean sprouts."
+        "I always make mine without bean sprouts.",
+        "Don't forget the carrots!"
       ],
       "likes": 6,
       "id": 2
-    },
-    {
-      "name": "moose tacos",
-      "image": "https://d3d0lqu00lnqvz.cloudfront.net/media/media/82d06bf1-25ff-46ee-8ff5-93dd73cf05c4.jpg",
-      "vegetarian": false,
-      "hasPeanuts": false,
-      "dairyFree": true,
-      "comments": [
-        ""
-      ],
-      "likes": 10,
-      "id": 3
     }
   ]
 }

@@ -20,9 +20,8 @@ function Home({food}){
     }, [food])
 
 
-    function handleClick() {
-        console.log(randomObj)
-    }
+
+    console.log(randomObj.image)
 
     
 
@@ -30,7 +29,10 @@ function Home({food}){
         <div>
             <h1>Welcome to Picky Eater</h1>
             <p>This restaurant can and will make anything. Make a suggestion in the recipe form and we will make it. Be sure to comment on and like your favorite dishes!</p>
-            <button onClick={handleClick} >Click for a random recipe</button>
+            <ul>
+                <h1>Meal of the Day: {randomObj.name}</h1><br/>
+                <image className="mealOfTheDay" src={randomObj.image} style={{height: '150px'}}/>
+            </ul>
         </div>
     )
 }

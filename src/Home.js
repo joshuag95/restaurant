@@ -2,34 +2,35 @@ import React, {useState, useEffect} from "react";
 
 function Home({food}){
 
-    const [idArray, setIdArray] = useState([])
 
-    let i = 0
+    const [randomObj, setRandomObj] = useState([])
 
-    useEffect(() =>  {while(i < 5) {food.map((foodObj) => setIdArray([...idArray, foodObj.id]))}}, [])
-    console.log(idArray)
+    const random = food[Math.floor(Math.random() * food.length)];
 
-    // let i = 0
+    useEffect(() => {
+    if (food.length === 0) {
 
-    // while (i < 5) {
-    //     console.log(food.length)
-    //     food.map(foodObj => setIdArray([...idArray, foodObj.id]))
-    //     console.log(idArray)
-    //     i++
-    //     console.log(i)
-    // }
+    }
+    else{
+        setRandomObj(random)
+
+    }
 
     
+    }, [food])
 
-    // function handleClick() {
-        
-    // }
+
+    function handleClick() {
+        console.log(randomObj)
+    }
+
+    
 
     return(
         <div>
             <h1>Welcome to Picky Eater</h1>
             <p>This restaurant can and will make anything. Make a suggestion in the recipe form and we will make it. Be sure to comment on and like your favorite dishes!</p>
-            <button  >Click for a random recipe</button>
+            <button onClick={handleClick} >Click for a random recipe</button>
         </div>
     )
 }

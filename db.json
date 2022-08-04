@@ -11,7 +11,7 @@
         "This is good, but i like to add garlic to my sauce.",
         "string"
       ],
-      "likes": 28,
+      "likes": 35,
       "id": 1
     },
     {
@@ -36,7 +36,7 @@
       "comments": [
         ""
       ],
-      "likes": 0,
+      "likes": 10,
       "id": 3
     }
   ]

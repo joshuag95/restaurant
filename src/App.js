@@ -48,14 +48,15 @@ function App() {
 		setFood(deleteArray)
 	}
 
-
+	const getFilteredArray = (filteredArray) => {return filteredArray}
+	console.log(filteredArray)
 	return (
 		<div className='App'>
 			<HeaderPage />
-			<NavBar />
+			<NavBar getFilteredArray={getFilteredArray} food={food} />
 			<Switch>
 				<Route exact path='/Home' ><Home /></Route>
-				<Route exact path='/FullMenu' ><FullMenu food={food} handleDelete={handleDelete} /></Route>
+				<Route exact path='/FullMenu' ><FullMenu food={getFilteredArray} getFilteredArray={getFilteredArray} handleDelete={handleDelete} /></Route>
 				<Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
 			</Switch>
 

@@ -51,14 +51,13 @@ function RecipeCard({ food, handleDelete}) {
             <button onClick={() => handleToggle()} >{toggle ? 'ingredients' : 'comments'}</button>
             </ul>
             <ul style={{paddingBlock: "20px"}}>
-                <p>{vegetarian ? "🍖: No" : "🍖: Yes"}</p><br/>
-                <p>{hasPeanuts ? "🥜: Yes" : "🥜: No"}</p><br/>
-                <p>{dairyFree ? "🐮: No" : "🐮: Yes"}</p><br/>
+                <p>{vegetarian ? "🍖: No" : "🍖: Yes"}</p>
+                <p>{hasPeanuts ? "🥜: Yes" : "🥜: No"}</p>
+                <p>{dairyFree ? "🐮: No" : "🐮: Yes"}</p>
                 <p onClick={handleLikeCount} style={{cursor: "pointer"}}>😘:{"⬅ " + likeCount}</p>
                 <div>
-                    <br/>
+
                     <p style={{fontWeight: "bold", color: "turquoise"}}>{toggle ? 'Comments' : 'Ingredients'}</p>
-                    <br/>
                     <br/>
                     <li className="cardComments"><div>{toggle ? 
 

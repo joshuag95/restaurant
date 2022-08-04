@@ -11,6 +11,7 @@ import FullMenu from './FullMenu';
 import RecipeForm from './RecipeForm'
 // import styled from 'styled-components';
 import Home from './Home';
+import SearchBar from './SearchBar';
 
 function App() {
 	const [food, setFood] = useState([])
@@ -48,15 +49,19 @@ function App() {
 		setFood(deleteArray)
 	}
 
-	const getFilteredArray = (filteredArray) => {return filteredArray}
-	console.log(filteredArray)
+	const [searchString, setSearchString] = useState('')
+
+	const filtered = food.filter(filterObj => filterObj.name.toLowerCase().includes(searchString.toLowerCase()))
+
+
 	return (
 		<div className='App'>
 			<HeaderPage />
-			<NavBar getFilteredArray={getFilteredArray} food={food} />
+			<NavBar  food={food} />
+			<SearchBar setSearchString={setSearchString}/>
 			<Switch>
-				<Route exact path='/Home' ><Home /></Route>
-				<Route exact path='/FullMenu' ><FullMenu food={getFilteredArray} getFilteredArray={getFilteredArray} handleDelete={handleDelete} /></Route>
+				<Route exact path='/Home' ><Home food={food} /></Route>
+				<Route exact path='/FullMenu' ><FullMenu food={filtered} handleDelete={handleDelete} /></Route>
 				<Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
 			</Switch>
 

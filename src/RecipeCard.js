@@ -62,28 +62,28 @@ function RecipeCard({ food, handleDelete }) {
                 <img src={image} style={{ height: "200px" }} />
                 <button onClick={() => handleToggle()} >{toggle ? 'ingredients' : 'comments'}</button>
             </ul>
-            <ul style={{ paddingBlock: "20px" }}>
-                <p>{vegetarian ? "🍖: No" : "🍖: Yes"}</p><br />
-                <p>{hasPeanuts ? "🥜: Yes" : "🥜: No"}</p><br />
-                <p>{dairyFree ? "🐮: No" : "🐮: Yes"}</p><br />
-                <p onClick={handleLikeCount} style={{ cursor: "pointer" }}>😘:{"⬅ " + likeCount}</p>
+            <ul style={{paddingBlock: "20px"}}>
+                <p>{vegetarian ? "🍖: No" : "🍖: Yes"}</p>
+                <p>{hasPeanuts ? "🥜: Yes" : "🥜: No"}</p>
+                <p>{dairyFree ? "🐮: No" : "🐮: Yes"}</p>
+                <p onClick={handleLikeCount} style={{cursor: "pointer"}}>😘:{"⬅ " + likeCount}</p>
                 <div>
-                    <br />
-                    <p style={{ fontWeight: "bold", color: "turquoise" }}>{toggle ? 'Comments' : 'Ingredients'}</p>
-                    <br />
-                    <br />
-                    <li className="cardComments"><div>{toggle ?
 
-                        <ul>
-                            <div>
-                                <CommentContainer comments={commentsArray} />
-                            </div>
-                            <input type='text' placeholder='Write your comment here!' onChange={(e) => setSearchString(e.target.value)} />
-                            <button onClick={() => renderComments(searchString)}>Submit</button>
-                        </ul>
+                    <p style={{fontWeight: "bold", color: "turquoise"}}>{toggle ? 'Comments' : 'Ingredients'}</p>
+                    <br/>
+                    <li className="cardComments"><div>{toggle ? 
 
-                        : ingredients}</div></li>
-                    <button style={{ cursor: "pointer" }} onClick={() => { handleDelete(id) }}>Remove Recipe</button>
+                    <ul>
+                        <div>
+                            <CommentContainer comments={commentsArray} />
+                        </div>
+                        <input type='text' placeholder='Write your comment here!' onChange={(e) => setSearchString(e.target.value)} />
+                        <button onClick={() => renderComments(searchString)}>Submit</button>
+                    </ul> 
+
+                    : ingredients}</div></li>
+                    <button style={{cursor: "pointer"}} onClick={() => { handleDelete(id) }}>Remove Recipe</button>
+
                 </div>
 
             </ul>

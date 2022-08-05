@@ -64,7 +64,6 @@ function App() {
 		<div className='App'>
 			<HeaderPage />
 			<NavBar food={food} />
-			
 			<Switch>
 				<Route exact path='/Home' ><Home food={food} /></Route>
 				<Route exact path='/FullMenu' ><FullMenu food={filtered} handleDelete={handleDelete} setSearchString={setSearchString} /></Route>

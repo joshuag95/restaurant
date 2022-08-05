@@ -1,13 +1,10 @@
 import React from 'react';
 
 
-function HeaderPage({titleToggle}) {
-    function easterEgg(){
-       return 
-    }
+function HeaderPage({titleToggle, rickRoll}) {
     return (
         <div>
-            <h1 className={titleToggle} onClick={easterEgg}>Picky🍴Eater</h1>
+            <h1 style={{cursor: 'pointer'}} onClick={() => rickRoll('https://www.youtube.com/watch?v=dQw4w9WgXcQ')} className={titleToggle}>Picky🍴Eater</h1>
         </div>
     )
 }

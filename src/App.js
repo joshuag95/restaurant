@@ -74,16 +74,21 @@ function App() {
 
 	}
 
+	const rickRoll = url => {
+		window.open(url, '_blank', 'noopener,noreferrer')
+	}
+
 	return (
 		<div className={darkToggle}>
 			<button onClick={darkMode}>DARK MODE</button>
-			<HeaderPage titleToggle={titleToggle}/>
+			<HeaderPage titleToggle={titleToggle} rickRoll={rickRoll}/>
 			<NavBar food={food} />
 			<Switch>
 				<Route exact path='/Home' ><Home food={food} /></Route>
 				<Route exact path='/FullMenu' ><FullMenu food={filtered} handleDelete={handleDelete} setSearchString={setSearchString} /></Route>
 				<Route exact path='/RecipeForm'><RecipeForm addRecipe={handleAddRecipe} /></Route>
 			</Switch>
+			<button onClick={() => rickRoll('https://www.youtube.com/watch?v=dQw4w9WgXcQ')}>DO NOT CLICK</button>
 
 
 		</div>

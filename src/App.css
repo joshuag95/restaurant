@@ -1,4 +1,16 @@
 .App {
+  background-color: #7b9cdc;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+
+}
+
+.AppDarkMode {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -7,16 +19,26 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
- 
+
 }
 
-h1 {
+.title {
   background-color: #e45219;
   border: dotted #c5cf07;
   color: #fffcfa;
-    box-shadow: 2px 2px 7px 1px #050f15;
+  box-shadow: 2px 2px 7px 1px #050f15;
   text-shadow: 1px 2px 2px #520351;
-  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
+
+.titleDark {
+  background-color: #930200;
+  border: dotted #a49f00;
+  color: #fffcfa;
+  box-shadow: 2px 2px 7px 1px #050f15;
+  text-shadow: 1px 2px 2px #520351;
+  font-family: Georgia, 'Times New Roman', Times, serif;
   text-align: center;
 }
 
@@ -39,23 +61,24 @@ h1 {
 .home {
   padding-top: 11%;
 }
+
 .navBar>a {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   background-color: aqua;
   text-align: center;
-  
+
 }
 
-.description{
-  background-color:blanchedalmond;
-  color:coral;
+.description {
+  background-color: blanchedalmond;
+  color: coral;
   text-align: center;
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
- 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
-.dailyMeal{
+.dailyMeal {
   padding: 30px;
   border: ridge #ae1700;
   background-image: url(https://m.media-amazon.com/images/I/41chfVU8fKS._AC_SX425_.jpg);
@@ -80,22 +103,22 @@ h1 {
 
 }
 
-.commentbtn{
+.commentbtn {
   position: relative;
   right: 135px;
   top: 30px;
-  
+
 }
 
-.image{
-  
+.image {
+
   align-items: center;
   top: 10px;
   height: 150px;
   width: 150px;
 }
 
-.cardImage{
+.cardImage {
   height: 200px;
   width: 200px;
 }
@@ -105,6 +128,6 @@ h1 {
   padding: 25px;
 }
 
-.searchBar{
+.searchBar {
   text-align: center;
 }

@@ -38,7 +38,8 @@
       "dairyFree": true,
       "ingredients": "Chicken, Tortillas, avacado, onion, lime, cilantro",
       "comments": [
-        ""
+        "",
+        "Super awesome!!!!!?"
       ],
       "likes": 0,
       "favorite": false
@@ -52,7 +53,8 @@
       "dairyFree": true,
       "ingredients": "Milk, Cereal of choice",
       "comments": [
-        ""
+        "",
+        "How I like to start my morning."
       ],
       "likes": 0,
       "favorite": false
@@ -66,7 +68,9 @@
       "dairyFree": false,
       "ingredients": "Spinach, Strawberries, Pecans, Feta Cheese, balsamic dressing",
       "comments": [
-        ""
+        "",
+        "Delectable",
+        "Couldnt find the meat??!!"
       ],
       "likes": 0,
       "favorite": false
@@ -80,7 +84,8 @@
       "dairyFree": false,
       "ingredients": "Buns, Burger patty, bacon, carmelized onions, tomato, lettuce, sharp cheddar cheese, pickle",
       "comments": [
-        ""
+        "",
+        "Impossible Beef?!?!?"
       ],
       "likes": 0,
       "favorite": false
@@ -94,7 +99,8 @@
       "dairyFree": false,
       "ingredients": "Steak, pita bread, tzatziki sauce, tomato or red peppers",
       "comments": [
-        ""
+        "",
+        "Reminds me of home"
       ],
       "likes": 0,
       "favorite": false
@@ -108,7 +114,8 @@
       "dairyFree": true,
       "ingredients": "Dino nuggets (100% real dinosaur meat only), ketchup",
       "comments": [
-        ""
+        "",
+        "Timeless Classic"
       ],
       "likes": 0,
       "favorite": false
@@ -122,7 +129,9 @@
       "dairyFree": false,
       "ingredients": "Potato (super easy)",
       "comments": [
-        ""
+        "",
+        "Most skilled dish by far",
+        "Can power lightbulbs"
       ],
       "likes": 0,
       "favorite": false

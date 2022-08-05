@@ -28,8 +28,8 @@ function Home({food}){
     return(
         <div>
             <h1>Welcome to Picky Eater</h1>
-            <p className="description">This restaurant can and will make anything<br></br>
-            Make a suggestion in the recipe form and we will make it<br></br> 
+            <p className="description">This restaurant can and will make anything!<br></br>
+            Make a suggestion in the recipe form and we will make it!<br></br> 
             Be sure to comment on and like your favorite dishes!</p>
             <ul >
                 <h1 className="dailyMeal">Suggested Dish: 

@@ -16,6 +16,9 @@ import SearchBar from './SearchBar';
 function App() {
 	const [food, setFood] = useState([])
 
+	const [darkToggle, setDarkToggle] = useState("App")
+	const [titleToggle, setTitleToggle] = useState("title")
+
 	useEffect(() => {
 		fetch("http://localhost:3000/recipes")
 			.then(res => res.json())
@@ -59,10 +62,22 @@ function App() {
 		 	filterObj.ingredients.toLowerCase().includes(searchString.toLowerCase())
 	)})
 
+	function darkMode(){
+		if (darkToggle === "App" || titleToggle === "title"){
+			setDarkToggle("AppDarkMode")
+			setTitleToggle("titleDark")
+		}
+		else if (darkToggle === "AppDarkMode" || titleToggle === "titleDark"){
+			setDarkToggle("App")
+			setTitleToggle("title")
+		}
+
+	}
 
 	return (
-		<div className='App'>
-			<HeaderPage />
+		<div className={darkToggle}>
+			<button onClick={darkMode}>DARK MODE</button>
+			<HeaderPage titleToggle={titleToggle}/>
 			<NavBar food={food} />
 			<Switch>
 				<Route exact path='/Home' ><Home food={food} /></Route>

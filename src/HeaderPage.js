@@ -1,10 +1,13 @@
 import React from 'react';
 
 
-function HeaderPage() {
+function HeaderPage({titleToggle}) {
+    function easterEgg(){
+       return 
+    }
     return (
         <div>
-            <h1>Picky🍴Eater</h1>
+            <h1 className={titleToggle} onClick={easterEgg}>Picky🍴Eater</h1>
         </div>
     )
 }

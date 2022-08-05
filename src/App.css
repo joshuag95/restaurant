@@ -7,16 +7,22 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: black;
+ 
 }
 
 h1 {
-  background-color: #05a839;
+  background-color: #e45219;
   border: dotted #c5cf07;
-  color: #f126ea;
-  font-family: ;
-  box-shadow: 2px 2px 7px 1px #050f15;
+  color: #fffcfa;
+    box-shadow: 2px 2px 7px 1px #050f15;
   text-shadow: 1px 2px 2px #520351;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+}
 
+.mealOfTheDay {
+  height: 150px;
+  width: 150px;
 }
 
 .navBar {
@@ -27,13 +33,40 @@ h1 {
   background-size: cover;
   padding: 18px;
 
+
 }
 
+.home {
+  padding-top: 11%;
+}
 .navBar>a {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
   background-color: aqua;
+  text-align: center;
+  
+}
 
+.description{
+  background-color:blanchedalmond;
+  color:coral;
+  text-align: center;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+}
+
+.dailyMeal{
+  padding: 30px;
+  border: ridge #ae1700;
+  background-image: url(https://m.media-amazon.com/images/I/41chfVU8fKS._AC_SX425_.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  border-radius: 60px;
+  word-wrap: break-word;
+  color: gold;
+  max-width: fit-content;
+  max-height: fit-content;
 }
 
 .card {
@@ -43,5 +76,35 @@ h1 {
   display: flex;
   justify-content: center;
   border-radius: 40px;
+  width: 650px;
 
+}
+
+.commentbtn{
+  position: relative;
+  right: 135px;
+  top: 30px;
+  
+}
+
+.image{
+  
+  align-items: center;
+  top: 10px;
+  height: 150px;
+  width: 150px;
+}
+
+.cardImage{
+  height: 200px;
+  width: 200px;
+}
+
+.cardComments {
+  max-width: 150px;
+  padding: 25px;
+}
+
+.searchBar{
+  text-align: center;
 }
